@@ -18,7 +18,7 @@ united_kingdom = [
 
 # 1. Change the capital of Wales from `"Swansea"` to `"Cardiff"`.
 #DOESN"T WORK
-united_kingdom[:capital].delete("Swansea")
+united_kingdom[1][:capital] = "Cardiff"
 
 
 
@@ -30,20 +30,31 @@ united_kingdom << {
 }
 p united_kingdom
 
+#or
+
+# new_hash = {
+#   name: "Northern Ireland",
+#   population: 1811000,
+#   capital: "Belfast"
+# }
+#
+# united_kingdom.push(new_hash)
+
+
 # 3. Use a loop to print the names of all the countries in the UK.
 
 #DOESN"T WORK
 
 for country in united_kingdom
-  p united_kingdom[:name]
+  p country[:name]
 end
 
 # 4. Use a loop to find the total population of the UK.
 
-#DOESN"T WORK
+
 total_pop = 0
-for population in united_kingdom
-  total_pop += united_kingdom[:population]
+for country in united_kingdom
+  total_pop += country[:population]
 
 end
-return total_pop
+p total_pop
