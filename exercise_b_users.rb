@@ -76,10 +76,20 @@ sort_lotto_number = eriks_lotto_numbers.sort
 p sort_lotto_number[0]
 
 # 6. Return an array of Avril's lottery numbers that are even
-lotto_numbers = 0
-lotto_numbers = users["Avril"][:lottery_numbers]
 
-p lotto_numbers.select { |number| number % 2 == 0}
+avril_lotto_numbers = users["Avril"][:lottery_numbers]
+
+even_num = []
+for lottery_number in avril_lotto_numbers
+  if lottery_number % 2 == 0
+    even_num.push(lottery_number)
+  end
+end
+p even_num
+
+# p lotto_numbers.select { |number| number % 2 == 0}
+
+
 
 
 # 7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
