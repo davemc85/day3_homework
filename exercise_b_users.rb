@@ -79,13 +79,13 @@ p sort_lotto_number[0]
 
 avril_lotto_numbers = users["Avril"][:lottery_numbers]
 
-even_num = []
+even_number = []
 for lottery_number in avril_lotto_numbers
   if lottery_number % 2 == 0
-    even_num.push(lottery_number)
+    even_number.push(lottery_number)
   end
 end
-p even_num
+p even_number
 
 # p lotto_numbers.select { |number| number % 2 == 0}
 
